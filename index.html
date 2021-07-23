@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
     
+     <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+
+      <script src="https://src.litix.io/videojs/4/videojs-mux.js"></script> 
+    
     <title>Jenny's Mux Test</title>
   </head>
 
@@ -19,6 +23,9 @@
   
     <center>
       <h1>Jenny's Mux Video.js Test</h1>
+      
+      
+     
     
       <video
         id="my-video"
@@ -41,9 +48,29 @@
       </video>
     </center>
     
-  <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
-    
-    
+
+    <script>
+  const playerInitTime = Date.now();
+
+  // EITHER initialize Mux Data monitoring like this
+  videojs('my-player', {
+    plugins: {
+      mux: {
+        debug: false,
+        data: {
+          env_key: 'lc00fi5qh3rrfg0j7o72n4j83', // required
+
+          // Metadata
+          player_name: 'Video.js', // ex: 'My Main Player'
+          player_init_time: playerInitTime // ex: 1451606400000
+
+          // ... and other metadata
+        }
+      }
+    }
+  });
+
+</script>  
     
     
     
