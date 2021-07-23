@@ -34,7 +34,7 @@
         preload="auto"
         width="640"
         height="264"
-<!-- poster="MY_VIDEO_POSTER.jpg" -->
+        poster="https://image.mux.com/y100J01XCZAcwg8ARqWsHqymC7HuPKQnnENCyG77iSnbo/thumbnail.png.jpg"
         data-setup="{}"
       >
         <source src="https://storage.googleapis.com/muxdemofiles/mux-video-intro.mp4" type="video/mp4" />
@@ -52,8 +52,8 @@
     <script>
   const playerInitTime = Date.now();
 
-  // EITHER initialize Mux Data monitoring like this
-  videojs('my-player', {
+  // Initialize Mux Data monitoring 
+  videojs('my-video', {
     plugins: {
       mux: {
         debug: false,
